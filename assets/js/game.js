@@ -129,8 +129,13 @@ for (var i = 0; i < enemyInfo.length; i++) {
         if (storeConfirm) {
           shop();
         }
+  }
+
   else {
     window.alert('You have lost your robot in battle! Game Over!');
     break;
   }
 }
+endGame();
+};
+
