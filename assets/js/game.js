@@ -58,6 +58,8 @@ console.log(enemyNames[3]);
 console.log(Math.PI);
 
 
+
+
 var fight = function(enemy) 
     
     
@@ -109,16 +111,24 @@ var fight = function(enemy)
     )
   }
   }; 
+var startGame = function () {
 
+  playerInfo.reset();
 for (var i = 0; i < enemyInfo.length; i++) {
   if (playerInfo.health > 0) {
     window.alert('Welcome to Robot Gladiators! Round ' + (i + 1));
 
     var pickedEnemyObj = enemyInfo[i];
-    enemy.health = Math.floor(Math.random() * 21) + 40;
+   pickedEnemyObj.health = randomNumber(40, 60);
+  
+      fight(pickedEnemyObj);
+      if (playerInfo.health > 0 && i < enemyInfo.length - 1) 
+        var storeConfirm = window.confirm("The fight is over, visit the store before the next round?");
+      
 
-    fight(pickedEnemyObj);
-  }
+        if (storeConfirm) {
+          shop();
+        }
   else {
     window.alert('You have lost your robot in battle! Game Over!');
     break;
