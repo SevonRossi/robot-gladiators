@@ -185,5 +185,8 @@ console.log(enemyInfo[0]['attack']);
 
 
 
-startGame();
+var startGame = function() {
+  playerInfo.reset();
+
+};
 
